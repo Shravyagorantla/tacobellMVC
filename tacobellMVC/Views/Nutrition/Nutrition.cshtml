@@ -1,0 +1,103 @@
+﻿@model IEnumerable<tacobellMVC.Models.FoodandNutrition>
+
+@{
+    Layout = null;
+}
+@{
+    ViewData["Title"] = "Nutrition";
+}
+
+<html>
+<head>
+  
+    <link rel="stylesheet" href="~/css/NutritionTable.css" />
+</head>
+<body>
+    <table class="tabledata">
+        <thead>
+
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NutritionId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FoodName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WeightInGrams)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Protein)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Calories)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Totalsugar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sodium)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Grain)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FruitorVegetable)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dairy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProteinClassification)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NutritionId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FoodName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WeightInGrams)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Protein)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Calories)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Totalsugar)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sodium)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Grain)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FruitorVegetable)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dairy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProteinClassification)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</body>
+</html>
+
